@@ -1,6 +1,3 @@
-Here is the updated README with the combined and refined dataset description, including the link to the COCO dataset:
-
----
 
 # Deep Learning Image Classification and Captioning
 
@@ -49,65 +46,80 @@ This project uses a subset of the COCO (Common Objects in Context) dataset for i
 
 ### 1. COCO Dataset Training - Vocabulary Size and Epochs Impact
 
-![COCO Dataset Training](https://github.com/user-attachments/assets/1c3ea052-1cd8-4625-b0c0-db64d3f4d1a9)
+<div align="center">
+    <img width="375" alt="COCO Dataset Training - Vocabulary Size and Epochs Impact" src="https://github.com/user-attachments/assets/1c3ea052-1cd8-4625-b0c0-db64d3f4d1a9">
+    <p><strong>Impact of Vocabulary Size and Epochs on Training and Validation Loss</strong></p>
+</div>
 
 #### Description:
-This graph illustrates the training and validation loss over epochs for the COCO dataset with a vocabulary size of 2537 words. The red line represents the training loss, while the green line shows the validation loss.
+This graph shows how varying vocabulary size affects training and validation loss over multiple epochs. The red line represents training loss, and the green line represents validation loss.
 
 **Key Observations:**
-- The training loss (red) decreases steadily over the epochs, indicating good learning progress.
-- The validation loss (green) initially decreases but then plateaus, suggesting potential overfitting after the 2nd epoch.
-- The gap between training and validation loss widens as epochs progress, further indicating overfitting.
+- The training loss decreases consistently, indicating effective learning.
+- Validation loss initially drops but starts to plateau, suggesting potential overfitting after the second epoch.
+- A widening gap between training and validation loss highlights overfitting trends.
 
 ### 2. Learning Rate Comparison - Loss and Accuracy Curves
 
-![Learning Rate Comparison Loss](https://github.com/user-attachments/assets/f7fad486-72bb-4c8c-a7c5-1a432457d312)
+<div align="center">
+    <img width="344" alt="Learning Rate Comparison - Loss and Accuracy Curves" src="https://github.com/user-attachments/assets/f7fad486-72bb-4c8c-a7c5-1a432457d312">
+    <p><strong>Effect of Learning Rate on Loss Performance</strong></p>
+</div>
 
-![Learning Rate Comparison Accuracy](https://github.com/user-attachments/assets/a8397668-8ff7-4f56-9605-a5f4403b6a44)
+<div align="center">
+    <img width="329" alt="Learning Rate Comparison - Accuracy Curves" src="https://github.com/user-attachments/assets/a8397668-8ff7-4f56-9605-a5f4403b6a44">
+    <p><strong>Effect of Learning Rate on Accuracy Performance</strong></p>
+</div>
 
 #### Description:
-These graphs compare the performance of the model with different learning rates (0.1, 0.01, 0.001) over 30 epochs.
+These graphs compare the performance of different learning rates over 30 epochs.
 
 **Key Observations:**
 - **Loss Curves:**
-  - Learning rate 0.1 (blue) shows unstable behavior with high loss.
-  - Learning rate 0.01 (green) demonstrates the best performance with the lowest loss.
-  - Learning rate 0.001 (purple) shows steady but slower improvement.
+  - Learning rate 0.1 shows instability with high loss.
+  - Learning rate 0.01 provides the best performance with the lowest loss.
+  - Learning rate 0.001 demonstrates steady but slower improvement.
 
 - **Accuracy Curves:**
-  - Learning rate 0.01 (green) achieves the highest training accuracy.
-  - Validation accuracies for 0.01 and 0.001 are comparable, with 0.01 slightly higher.
-  - Learning rate 0.1 shows poor accuracy, indicating it's too high for effective learning.
+  - Learning rate 0.01 achieves the highest accuracy during training.
+  - Validation accuracy for 0.01 is slightly better than for 0.001.
+  - Learning rate 0.1 results in poor accuracy, indicating it's too high.
 
 ### 3. Model Performance with Dropout
 
-![Model Performance with Dropout](https://github.com/user-attachments/assets/14fa5bbd-42d3-4c24-a548-a0900e51f053)
+<div align="center">
+    <img width="346" alt="Model Performance with Dropout" src="https://github.com/user-attachments/assets/14fa5bbd-42d3-4c24-a548-a0900e51f053">
+    <p><strong>Training and Validation Performance with Dropout Regularization</strong></p>
+</div>
 
 #### Description:
-These graphs show the training and validation loss and accuracy over epochs for a model implemented with dropout.
+These graphs illustrate the effect of dropout on training and validation loss and accuracy.
 
 **Key Observations:**
 - **Loss Curves:**
-  - Training loss (blue) consistently decreases over epochs.
-  - Validation loss (orange) decreases initially but shows fluctuations, indicating some overfitting.
+  - Training loss decreases consistently.
+  - Validation loss shows fluctuations, suggesting some overfitting.
 
 - **Accuracy Curves:**
-  - Training accuracy (blue) increases steadily, reaching about 65% by the final epoch.
-  - Validation accuracy (orange) improves but plateaus around 50%, suggesting the model generalizes reasonably well but has room for improvement.
+  - Training accuracy improves steadily, reaching around 65%.
+  - Validation accuracy reaches about 50%, indicating reasonable generalization but room for improvement.
 
 ### 4. Image Captioning Example
 
-![Image Captioning Example](https://github.com/user-attachments/assets/5225d1f5-03fa-4e7a-85c0-ffa79d8ab96e)
+<div align="center">
+    <img width="441" alt="Image Captioning Example" src="https://github.com/user-attachments/assets/5225d1f5-03fa-4e7a-85c0-ffa79d8ab96e">
+    <p><strong>Generated Caption for an Example Image</strong></p>
+</div>
 
 #### Description:
-This image demonstrates the model's image captioning capability.
+This image demonstrates the captioning capability of the model.
 
-**Generated Caption:** "a man riding a horse in a field"
+**Generated Caption:** "A man riding a horse in an open field."
 
 **Key Observations:**
-- The model correctly identifies the main elements of the image: a person, a horse, and the outdoor setting.
-- While the generated caption is concise and accurate, it misses some details like the path or the mountain in the background.
-- The lack of reference captions prevents a direct comparison, but the generated caption appears to capture the essence of the image well.
+- The caption effectively captures the main elements of the image: a person, a horse, and the field.
+- Although the caption is accurate, some background details are missing.
+- The generated caption is coherent and relevant to the image content.
 
 ## Conclusion
 
@@ -164,8 +176,3 @@ To further enhance this project, the following future works are proposed:
 2. **Expand to Video Captioning**: Extend the captioning model to work with video data.
 3. **Multi-modal Learning**: Integrate text and image data for more comprehensive understanding and generation tasks.
 4. **Attention Mechanisms**: Implement attention mechanisms to improve the image captioning model's performance.
-5. **Real-time Classification and Captioning**: Develop a system for real-time image classification and captioning using webcam input.
-
----
-
-Feel free to adjust any other details as needed!
